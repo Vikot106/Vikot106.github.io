@@ -357,23 +357,82 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2021/05/27/hello-world/" >
+        <a class="abstract-title" href = "/%E5%B7%A5%E5%85%B7/tool-RandomGroup/" >
             
-                <span>Hello World</span>
+                <span>程序：随机分组工具</span>
         </a>
         <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+             几天前，老师问我
+“如果给你一本C#的书去自学，你能做出一个作品吗”
+于是这个小工具就诞生啦~
+工具介绍
+截图：
 
-More info: Writing
-Run server1$ hexo ...
+
+该工具在.net2.0环境下编译，大多数计算机无需安装依赖即可使用，且有处理乱码的模块。
+
+该工具可通过导入文本文件进行分组，可自定义分组列表，使用方便可自定义。
+
+该工具界面经过精心设计，简单易用，提高效率。
+
+
+使用方法分组列表  增加 按钮：增加一个分组，组别信息包括组名、人数。
+  重设 按钮：清除分组列表与结果列表。
+  删除 按钮：删除DataGridView中当前选定的组。
+组员列表  SelectFileLog：显示为当前选定的文本文件名。
+  重载 按...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/27</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/03</span>
             </div>
             <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "C#">C#</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = ".net">.net</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/%E7%AC%94%E8%AE%B0/note-hexo/" >
+            
+                <span>笔记：hexo中创建文章、标签与分类</span>
+        </a>
+        <div class="abstract-content">
+            1. 创建文章a. 文章创建命令1hexo new &quot;文章名称&quot;
+
+b. 基本配置12345678910---title: CentOS7下Tomcat的部署date: 2018-11-12 21:01:24comments: true #是否可评论toc: true #是否显示文章目录categories: &quot;云服务器&quot; #分类tags:   #标签	- centOS	- tomcat---
+
+2. 创建标签a. 标签页面创建命令1hexo new page tags
+
+b. 基本配置12345---title: tagsdate: 2018-1...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "hexo">hexo</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "更新中">更新中</a>
+    
+</div>
             
         </div>
     </article>
@@ -498,9 +557,16 @@ Run server1$ hexo ...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 1
+        Total : 2
         </div>
         <!-- search  -->
         
@@ -511,18 +577,40 @@ Run server1$ hexo ...
     
     
     
-    <div class="archive-year"> Invalid date </div>
+    <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/05/27/hello-world/" >Hello World</a>
+            <span class="archive-post-date">04/03</span><a class="archive-post-title" href= "/%E5%B7%A5%E5%85%B7/tool-RandomGroup/" >程序：随机分组工具</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/%E7%AC%94%E8%AE%B0/note-hexo/" >笔记：hexo中创建文章、标签与分类</a>
         </li>
     
     </div>
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="更新中"><span class="iconfont-archer">&#xe606;</span>更新中</span>
+    
+        <span class="sidebar-tag-name" data-tags="C#"><span class="iconfont-archer">&#xe606;</span>C#</span>
+    
+        <span class="sidebar-tag-name" data-tags=".net"><span class="iconfont-archer">&#xe606;</span>.net</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -556,6 +644,10 @@ jsonContent:
 </div>
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="笔记"><span class="iconfont-archer">&#xe60a;</span>笔记</span>
+    
+        <span class="sidebar-category-name" data-categories="工具"><span class="iconfont-archer">&#xe60a;</span>工具</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
