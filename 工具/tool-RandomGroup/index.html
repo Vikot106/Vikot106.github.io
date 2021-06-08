@@ -291,7 +291,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.3k</span>阅读时长: <span class="post-count reading-time">6 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.1k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -447,117 +447,12 @@ height:50vh;
 <h2 id="技术简述"><a href="#技术简述" class="headerlink" title="技术简述"></a>技术简述</h2><h3 id="部分源代码"><a href="#部分源代码" class="headerlink" title="部分源代码"></a>部分源代码</h3><ul>
 <li>乱序分组</li>
 </ul>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">iDicPar &#x3D; new Dictionary&lt;int, string&gt;();
-            Random rand &#x3D; new Random();
-
-            for (int i &#x3D; 0; i &lt; textcount; i++)&#123;
-                iDicPar.Add(i, textBox3.Lines[i]); 
-            &#125;
-
-            for (int i &#x3D; 0; i &lt; dgvGroup.Rows.Count; i++)&#123;
-                int groupqual &#x3D; int.Parse(dgvGroup.Rows[i].Cells[1].Value.ToString());
-                for (int j &#x3D; 0; j &lt; groupqual; j++)&#123;
-                    int randnum &#x3D; rand.Next(0, textcount);
-                    bool done &#x3D; false;
-                    while (!done)&#123;
-                        if (iDicPar.ContainsKey(randnum))&#123;
-                            this.dgvResult.Rows.Add(1);
-                            this.dgvResult.Rows[this.dgvResult.Rows.Count - 1].Cells[0].Value &#x3D; this.dgvGroup.Rows[i].Cells[0].Value;
-                            this.dgvResult.Rows[this.dgvResult.Rows.Count - 1].Cells[1].Value &#x3D; iDicPar[randnum];
-                            iDicPar.Remove(randnum);
-                            done &#x3D; true;
-                        &#125;else&#123;
-                            randnum &#x3D; rand.Next(0, textcount);
-                        &#125;
-                    &#125;
-                &#125;
-            &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">iDicPar = new Dictionary&lt;int, string&gt;();</span><br><span class="line">            Random rand = new Random();</span><br><span class="line"></span><br><span class="line">            for (int i = 0; i &lt; textcount; i++)&#123;</span><br><span class="line">                iDicPar.Add(i, textBox3.Lines[i]); </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            for (int i = 0; i &lt; dgvGroup.Rows.Count; i++)&#123;</span><br><span class="line">                int groupqual = int.Parse(dgvGroup.Rows[i].Cells[1].Value.ToString());</span><br><span class="line">                for (int j = 0; j &lt; groupqual; j++)&#123;</span><br><span class="line">                    int randnum = rand.Next(0, textcount);</span><br><span class="line">                    bool done = false;</span><br><span class="line">                    while (!done)&#123;</span><br><span class="line">                        if (iDicPar.ContainsKey(randnum))&#123;</span><br><span class="line">                            this.dgvResult.Rows.Add(1);</span><br><span class="line">                            this.dgvResult.Rows[this.dgvResult.Rows.Count - 1].Cells[0].Value = this.dgvGroup.Rows[i].Cells[0].Value;</span><br><span class="line">                            this.dgvResult.Rows[this.dgvResult.Rows.Count - 1].Cells[1].Value = iDicPar[randnum];</span><br><span class="line">                            iDicPar.Remove(randnum);</span><br><span class="line">                            done = true;</span><br><span class="line">                        &#125;else&#123;</span><br><span class="line">                            randnum = rand.Next(0, textcount);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>编码读取</li>
 </ul>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">&#x2F;&#x2F;&#x2F; &lt;summary&gt;
-&#x2F;&#x2F;&#x2F; FileEncoding 的摘要说明
-&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
-namespace FileEncoding&#123;
-    &#x2F;&#x2F;&#x2F; &lt;summary&gt;
-    &#x2F;&#x2F;&#x2F; 获取文件的编码格式
-    &#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
-    public class EncodingType&#123;
-        &#x2F;&#x2F;&#x2F; &lt;summary&gt;
-        &#x2F;&#x2F;&#x2F; 给定文件的路径，读取文件的二进制数据，判断文件的编码类型
-        &#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
-        &#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;FILE_NAME&quot;&gt;文件路径&lt;&#x2F;param&gt;
-        &#x2F;&#x2F;&#x2F; &lt;returns&gt;文件的编码类型&lt;&#x2F;returns&gt;
-        public static System.Text.Encoding GetType(string FILE_NAME)&#123;
-            FileStream fs &#x3D; new FileStream(FILE_NAME, FileMode.Open, FileAccess.Read);
-            Encoding r &#x3D; GetType(fs);
-            fs.Close();
-            return r;
-        &#125;
-
-        &#x2F;&#x2F;&#x2F; &lt;summary&gt;
-        &#x2F;&#x2F;&#x2F; 通过给定的文件流，判断文件的编码类型
-        &#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
-        &#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;fs&quot;&gt;文件流&lt;&#x2F;param&gt;
-        &#x2F;&#x2F;&#x2F; &lt;returns&gt;文件的编码类型&lt;&#x2F;returns&gt;
-        public static System.Text.Encoding GetType(FileStream fs)&#123;
-            byte[] Unicode &#x3D; new byte[] &#123; 0xFF, 0xFE, 0x41 &#125;;
-            byte[] UnicodeBIG &#x3D; new byte[] &#123; 0xFE, 0xFF, 0x00 &#125;;
-            byte[] UTF8 &#x3D; new byte[] &#123; 0xEF, 0xBB, 0xBF &#125;; &#x2F;&#x2F;带BOM
-            Encoding reVal &#x3D; Encoding.Default;
-
-            BinaryReader r &#x3D; new BinaryReader(fs, System.Text.Encoding.Default);
-            int i;
-            int.TryParse(fs.Length.ToString(), out i);
-            byte[] ss &#x3D; r.ReadBytes(i);
-            if (IsUTF8Bytes(ss) || (ss[0] &#x3D;&#x3D; 0xEF &amp;&amp; ss[1] &#x3D;&#x3D; 0xBB &amp;&amp; ss[2] &#x3D;&#x3D; 0xBF))&#123;
-                reVal &#x3D; Encoding.UTF8;
-            &#125;else if (ss[0] &#x3D;&#x3D; 0xFE &amp;&amp; ss[1] &#x3D;&#x3D; 0xFF &amp;&amp; ss[2] &#x3D;&#x3D; 0x00)&#123;
-                reVal &#x3D; Encoding.BigEndianUnicode;
-            &#125;else if (ss[0] &#x3D;&#x3D; 0xFF &amp;&amp; ss[1] &#x3D;&#x3D; 0xFE &amp;&amp; ss[2] &#x3D;&#x3D; 0x41)&#123;
-                reVal &#x3D; Encoding.Unicode;
-            &#125;
-            r.Close();
-            return reVal;
-        &#125;
-
-        &#x2F;&#x2F;&#x2F; &lt;summary&gt;
-        &#x2F;&#x2F;&#x2F; 判断是否是不带 BOM 的 UTF8 格式
-        &#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
-        &#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;data&quot;&gt;&lt;&#x2F;param&gt;
-        &#x2F;&#x2F;&#x2F; &lt;returns&gt;&lt;&#x2F;returns&gt;
-        private static bool IsUTF8Bytes(byte[] data)&#123;
-            int charByteCounter &#x3D; 1; &#x2F;&#x2F;计算当前正分析的字符应还有的字节数
-            byte curByte; &#x2F;&#x2F;当前分析的字节.
-            for (int i &#x3D; 0; i &lt; data.Length; i++)&#123;
-                curByte &#x3D; data[i];
-                if (charByteCounter &#x3D;&#x3D; 1)&#123;
-                    if (curByte &gt;&#x3D; 0x80)&#123;
-                        &#x2F;&#x2F;判断当前
-                        while (((curByte &lt;&lt;&#x3D; 1) &amp; 0x80) !&#x3D; 0)&#123;
-                            charByteCounter++;
-                        &#125;
-                        &#x2F;&#x2F;标记位首位若为非0 则至少以2个1开始 如:110XXXXX...........1111110X 
-                        if (charByteCounter &#x3D;&#x3D; 1 || charByteCounter &gt; 6)&#123;
-                            return false;
-                        &#125;
-                    &#125;
-                &#125;else&#123;
-                    &#x2F;&#x2F;若是UTF-8 此时第一位必须为1
-                    if ((curByte &amp; 0xC0) !&#x3D; 0x80)&#123;
-                        return false;
-                    &#125;
-                    charByteCounter--;
-                &#125;
-            &#125;
-            if (charByteCounter &gt; 1)&#123;
-                throw new Exception(&quot;非预期的byte格式&quot;);
-            &#125;
-            return true;
-        &#125;
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// FileEncoding 的摘要说明</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">namespace FileEncoding&#123;</span><br><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// 获取文件的编码格式</span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    public class EncodingType&#123;</span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">        /// 给定文件的路径，读取文件的二进制数据，判断文件的编码类型</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=&quot;FILE_NAME&quot;&gt;文件路径&lt;/param&gt;</span><br><span class="line">        /// &lt;returns&gt;文件的编码类型&lt;/returns&gt;</span><br><span class="line">        public static System.Text.Encoding GetType(string FILE_NAME)&#123;</span><br><span class="line">            FileStream fs = new FileStream(FILE_NAME, FileMode.Open, FileAccess.Read);</span><br><span class="line">            Encoding r = GetType(fs);</span><br><span class="line">            fs.Close();</span><br><span class="line">            return r;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">        /// 通过给定的文件流，判断文件的编码类型</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=&quot;fs&quot;&gt;文件流&lt;/param&gt;</span><br><span class="line">        /// &lt;returns&gt;文件的编码类型&lt;/returns&gt;</span><br><span class="line">        public static System.Text.Encoding GetType(FileStream fs)&#123;</span><br><span class="line">            byte[] Unicode = new byte[] &#123; 0xFF, 0xFE, 0x41 &#125;;</span><br><span class="line">            byte[] UnicodeBIG = new byte[] &#123; 0xFE, 0xFF, 0x00 &#125;;</span><br><span class="line">            byte[] UTF8 = new byte[] &#123; 0xEF, 0xBB, 0xBF &#125;; //带BOM</span><br><span class="line">            Encoding reVal = Encoding.Default;</span><br><span class="line"></span><br><span class="line">            BinaryReader r = new BinaryReader(fs, System.Text.Encoding.Default);</span><br><span class="line">            int i;</span><br><span class="line">            int.TryParse(fs.Length.ToString(), out i);</span><br><span class="line">            byte[] ss = r.ReadBytes(i);</span><br><span class="line">            if (IsUTF8Bytes(ss) || (ss[0] == 0xEF &amp;&amp; ss[1] == 0xBB &amp;&amp; ss[2] == 0xBF))&#123;</span><br><span class="line">                reVal = Encoding.UTF8;</span><br><span class="line">            &#125;else if (ss[0] == 0xFE &amp;&amp; ss[1] == 0xFF &amp;&amp; ss[2] == 0x00)&#123;</span><br><span class="line">                reVal = Encoding.BigEndianUnicode;</span><br><span class="line">            &#125;else if (ss[0] == 0xFF &amp;&amp; ss[1] == 0xFE &amp;&amp; ss[2] == 0x41)&#123;</span><br><span class="line">                reVal = Encoding.Unicode;</span><br><span class="line">            &#125;</span><br><span class="line">            r.Close();</span><br><span class="line">            return reVal;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">        /// 判断是否是不带 BOM 的 UTF8 格式</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=&quot;data&quot;&gt;&lt;/param&gt;</span><br><span class="line">        /// &lt;returns&gt;&lt;/returns&gt;</span><br><span class="line">        private static bool IsUTF8Bytes(byte[] data)&#123;</span><br><span class="line">            int charByteCounter = 1; //计算当前正分析的字符应还有的字节数</span><br><span class="line">            byte curByte; //当前分析的字节.</span><br><span class="line">            for (int i = 0; i &lt; data.Length; i++)&#123;</span><br><span class="line">                curByte = data[i];</span><br><span class="line">                if (charByteCounter == 1)&#123;</span><br><span class="line">                    if (curByte &gt;= 0x80)&#123;</span><br><span class="line">                        //判断当前</span><br><span class="line">                        while (((curByte &lt;&lt;= 1) &amp; 0x80) != 0)&#123;</span><br><span class="line">                            charByteCounter++;</span><br><span class="line">                        &#125;</span><br><span class="line">                        //标记位首位若为非0 则至少以2个1开始 如:110XXXXX...........1111110X </span><br><span class="line">                        if (charByteCounter == 1 || charByteCounter &gt; 6)&#123;</span><br><span class="line">                            return false;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    //若是UTF-8 此时第一位必须为1</span><br><span class="line">                    if ((curByte &amp; 0xC0) != 0x80)&#123;</span><br><span class="line">                        return false;</span><br><span class="line">                    &#125;</span><br><span class="line">                    charByteCounter--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if (charByteCounter &gt; 1)&#123;</span><br><span class="line">                throw new Exception(&quot;非预期的byte格式&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><ul>
 <li>[ Dictionary&lt;int, string&gt; iDicPar; ] 为一个HashMap类型，泛型 &lt;int, string&gt; 中，int为不可重复的key，string为可重复的value。</li>
@@ -576,7 +471,7 @@ namespace FileEncoding&#123;
         <div class="license-wrapper">
             <p>原文作者：<a href="http://Vikot106.github.io">Vikot106</a>
             <p>原文链接：<a href="http://vikot106.github.io/%E5%B7%A5%E5%85%B7/tool-RandomGroup/">http://vikot106.github.io/%E5%B7%A5%E5%85%B7/tool-RandomGroup/</a>
-            <p>发表日期：<a href="http://vikot106.github.io/%E5%B7%A5%E5%85%B7/tool-RandomGroup/">四月 3日 2019, 8:06:18 晚上</a>
+            <p>发表日期：<a href="http://vikot106.github.io/%E5%B7%A5%E5%85%B7/tool-RandomGroup/">April 3rd 2019, 8:06:18 pm</a>
             <p>更新日期：<a href="http://vikot106.github.io/%E5%B7%A5%E5%85%B7/tool-RandomGroup/">April 3rd 2019, 9:18:49 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>

@@ -20,12 +20,12 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="Vikot106’s blog">
-    <meta name="description" content="1. 创建文章a. 文章创建命令hexo new &quot;文章名称&quot;  b. 基本配置--- title: CentOS7下Tomcat的部署 date: 2018-11-12 21:01:24 comments: true #是否可评论 toc: true #是否显示文章目录 categories: &quot;云服务器&quot; #分类 tags:   #标签 	- centOS 	- tomcat ---  2.">
+    <meta name="description" content="1. 创建文章a. 文章创建命令1hexo new &quot;文章名称&quot;  b. 基本配置12345678910---title: CentOS7下Tomcat的部署date: 2018-11-12 21:01:24comments: true #是否可评论toc: true #是否显示文章目录categories: &quot;云服务器&quot; #分类tags:   #标签	-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记：hexo中创建文章、标签与分类">
 <meta property="og:url" content="http://vikot106.github.io/%E7%AC%94%E8%AE%B0/note-hexo/index.html">
 <meta property="og:site_name" content="Vikot106’s blog">
-<meta property="og:description" content="1. 创建文章a. 文章创建命令hexo new &quot;文章名称&quot;  b. 基本配置--- title: CentOS7下Tomcat的部署 date: 2018-11-12 21:01:24 comments: true #是否可评论 toc: true #是否显示文章目录 categories: &quot;云服务器&quot; #分类 tags:   #标签 	- centOS 	- tomcat ---  2.">
+<meta property="og:description" content="1. 创建文章a. 文章创建命令1hexo new &quot;文章名称&quot;  b. 基本配置12345678910---title: CentOS7下Tomcat的部署date: 2018-11-12 21:01:24comments: true #是否可评论toc: true #是否显示文章目录categories: &quot;云服务器&quot; #分类tags:   #标签	-">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-11-12T11:46:12.000Z">
 <meta property="article:modified_time" content="2018-11-12T12:01:31.859Z">
@@ -289,7 +289,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">133</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">138</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -418,34 +418,17 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="1-创建文章"><a href="#1-创建文章" class="headerlink" title="1. 创建文章"></a>1. 创建文章</h2><h3 id="a-文章创建命令"><a href="#a-文章创建命令" class="headerlink" title="a. 文章创建命令"></a>a. 文章创建命令</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token string">"文章名称"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+        <h2 id="1-创建文章"><a href="#1-创建文章" class="headerlink" title="1. 创建文章"></a>1. 创建文章</h2><h3 id="a-文章创建命令"><a href="#a-文章创建命令" class="headerlink" title="a. 文章创建命令"></a>a. 文章创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章名称&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="b-基本配置"><a href="#b-基本配置" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token font-matter yaml language-yaml">title: CentOS7下Tomcat的部署
-date: 2018-11-12 21:01:24
-comments: true #是否可评论
-toc: true #是否显示文章目录
-categories: "云服务器" #分类
-tags:   #标签
-	- centOS
-	- tomcat</span>
-<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="b-基本配置"><a href="#b-基本配置" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: CentOS7下Tomcat的部署</span><br><span class="line">date: 2018-11-12 21:01:24</span><br><span class="line">comments: true #是否可评论</span><br><span class="line">toc: true #是否显示文章目录</span><br><span class="line">categories: &quot;云服务器&quot; #分类</span><br><span class="line">tags:   #标签</span><br><span class="line"><span class="bullet">	-</span> centOS</span><br><span class="line"><span class="section">	- tomcat</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="2-创建标签"><a href="#2-创建标签" class="headerlink" title="2. 创建标签"></a>2. 创建标签</h2><h3 id="a-标签页面创建命令"><a href="#a-标签页面创建命令" class="headerlink" title="a. 标签页面创建命令"></a>a. 标签页面创建命令</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page tags<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="2-创建标签"><a href="#2-创建标签" class="headerlink" title="2. 创建标签"></a>2. 创建标签</h2><h3 id="a-标签页面创建命令"><a href="#a-标签页面创建命令" class="headerlink" title="a. 标签页面创建命令"></a>a. 标签页面创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
 
-<h3 id="b-基本配置-1"><a href="#b-基本配置-1" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token font-matter yaml language-yaml">title: tags
-date: 2018-11-12 21:01:24
-type: "tags"</span>
-<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="b-基本配置-1"><a href="#b-基本配置-1" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-11-12 21:01:24</span><br><span class="line"><span class="section">type: &quot;tags&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="3-创建分类"><a href="#3-创建分类" class="headerlink" title="3. 创建分类"></a>3. 创建分类</h2><h3 id="a-分类页面创建命令"><a href="#a-分类页面创建命令" class="headerlink" title="a. 分类页面创建命令"></a>a. 分类页面创建命令</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page categories<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="3-创建分类"><a href="#3-创建分类" class="headerlink" title="3. 创建分类"></a>3. 创建分类</h2><h3 id="a-分类页面创建命令"><a href="#a-分类页面创建命令" class="headerlink" title="a. 分类页面创建命令"></a>a. 分类页面创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
 
-<h3 id="b-基本配置-2"><a href="#b-基本配置-2" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token font-matter yaml language-yaml">title: categories
-date: 2018-11-12 21:01:24
-type: "categories"</span>
-<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="b-基本配置-2"><a href="#b-基本配置-2" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2018-11-12 21:01:24</span><br><span class="line"><span class="section">type: &quot;categories&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
 
     </article>
@@ -454,7 +437,7 @@ type: "categories"</span>
         <div class="license-wrapper">
             <p>原文作者：<a href="http://Vikot106.github.io">Vikot106</a>
             <p>原文链接：<a href="http://vikot106.github.io/%E7%AC%94%E8%AE%B0/note-hexo/">http://vikot106.github.io/%E7%AC%94%E8%AE%B0/note-hexo/</a>
-            <p>发表日期：<a href="http://vikot106.github.io/%E7%AC%94%E8%AE%B0/note-hexo/">十一月 12日 2018, 7:46:12 晚上</a>
+            <p>发表日期：<a href="http://vikot106.github.io/%E7%AC%94%E8%AE%B0/note-hexo/">November 12th 2018, 7:46:12 pm</a>
             <p>更新日期：<a href="http://vikot106.github.io/%E7%AC%94%E8%AE%B0/note-hexo/">November 12th 2018, 8:01:31 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
