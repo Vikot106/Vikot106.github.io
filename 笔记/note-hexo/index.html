@@ -209,21 +209,6 @@
     <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
     <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/js/all.min.js"  data-auto-replace-svg="nest" ></script>
     
-        <!-- algolia -->
-        <script>
-            
-            var hits = JSON.parse('{"per_page":10}')
-            var labels = JSON.parse('{"input_placeholder":"Search for Posts","hits_empty":"We did not find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}')
-
-            var algolia = {
-                appId: '',
-                apiKey: '9260923c69b56ec58155cd775e7909a0',
-                indexName: 'dev_moku_ink',
-                hits: hits,
-                labels: labels
-            }
-        </script>
-    
     <!-- fancybox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
     <!-- 百度统计  -->
@@ -433,17 +418,17 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="1-创建文章"><a href="#1-创建文章" class="headerlink" title="1. 创建文章"></a>1. 创建文章</h2><h3 id="a-文章创建命令"><a href="#a-文章创建命令" class="headerlink" title="a. 文章创建命令"></a>a. 文章创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;文章名称&quot;</span><br></code></pre></td></tr></table></figure>
+        <h2 id="1-创建文章"><a href="#1-创建文章" class="headerlink" title="1. 创建文章"></a>1. 创建文章</h2><h3 id="a-文章创建命令"><a href="#a-文章创建命令" class="headerlink" title="a. 文章创建命令"></a>a. 文章创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章名称&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="b-基本配置"><a href="#b-基本配置" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: CentOS7下Tomcat的部署<br>date: 2018-11-12 21:01:24<br>comments: true #是否可评论<br>toc: true #是否显示文章目录<br>categories: &quot;云服务器&quot; #分类<br>tags:   #标签<br><span class="hljs-bullet">	-</span> centOS<br><span class="hljs-section">	- tomcat</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></figure>
+<h3 id="b-基本配置"><a href="#b-基本配置" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: CentOS7下Tomcat的部署</span><br><span class="line">date: 2018-11-12 21:01:24</span><br><span class="line">comments: true #是否可评论</span><br><span class="line">toc: true #是否显示文章目录</span><br><span class="line">categories: &quot;云服务器&quot; #分类</span><br><span class="line">tags:   #标签</span><br><span class="line"><span class="bullet">	-</span> centOS</span><br><span class="line"><span class="section">	- tomcat</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="2-创建标签"><a href="#2-创建标签" class="headerlink" title="2. 创建标签"></a>2. 创建标签</h2><h3 id="a-标签页面创建命令"><a href="#a-标签页面创建命令" class="headerlink" title="a. 标签页面创建命令"></a>a. 标签页面创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page tags<br></code></pre></td></tr></table></figure>
+<h2 id="2-创建标签"><a href="#2-创建标签" class="headerlink" title="2. 创建标签"></a>2. 创建标签</h2><h3 id="a-标签页面创建命令"><a href="#a-标签页面创建命令" class="headerlink" title="a. 标签页面创建命令"></a>a. 标签页面创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
 
-<h3 id="b-基本配置-1"><a href="#b-基本配置-1" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: tags<br>date: 2018-11-12 21:01:24<br><span class="hljs-section">type: &quot;tags&quot;</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></figure>
+<h3 id="b-基本配置-1"><a href="#b-基本配置-1" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-11-12 21:01:24</span><br><span class="line"><span class="section">type: &quot;tags&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="3-创建分类"><a href="#3-创建分类" class="headerlink" title="3. 创建分类"></a>3. 创建分类</h2><h3 id="a-分类页面创建命令"><a href="#a-分类页面创建命令" class="headerlink" title="a. 分类页面创建命令"></a>a. 分类页面创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page categories<br></code></pre></td></tr></table></figure>
+<h2 id="3-创建分类"><a href="#3-创建分类" class="headerlink" title="3. 创建分类"></a>3. 创建分类</h2><h3 id="a-分类页面创建命令"><a href="#a-分类页面创建命令" class="headerlink" title="a. 分类页面创建命令"></a>a. 分类页面创建命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
 
-<h3 id="b-基本配置-2"><a href="#b-基本配置-2" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: categories<br>date: 2018-11-12 21:01:24<br><span class="hljs-section">type: &quot;categories&quot;</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></figure>
+<h3 id="b-基本配置-2"><a href="#b-基本配置-2" class="headerlink" title="b. 基本配置"></a>b. 基本配置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2018-11-12 21:01:24</span><br><span class="line"><span class="section">type: &quot;categories&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
 
     </article>
@@ -642,10 +627,6 @@ top:50vh;
         </div>
         <!-- search  -->
         
-            <div class="site-search popup-trigger">
-                <span class="iconfont-archer search-icon">&#xe627;</span>
-            </div>
-        
     </div>
     
     <div class="post-archive">
@@ -748,31 +729,6 @@ jsonContent:
     </script>
     <script src="/scripts/main.js"></script>
     <!-- algolia -->
-    
-        <div class="site-search">
-  <div class="algolia-popup popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="iconfont-archer">&#xe609;</i>
-    </span>
-  </div>
-</div>
-
-
-        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
-        <script src="/scripts/search.js" defer></script>
     
     <!-- busuanzi  -->
     
